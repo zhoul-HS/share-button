@@ -1,5 +1,5 @@
 # classList shim for IE 9
-if ("classList" not of document.documentElement) and Object.defineProperty and typeof HTMLElement isnt "undefined"
+if typeof document isnt "undefined" and ("classList" not of document.documentElement) and Object.defineProperty and typeof HTMLElement isnt "undefined"
   Object.defineProperty HTMLElement::, "classList",
     get: ->
       update = (fn) ->
